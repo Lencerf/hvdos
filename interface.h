@@ -7,7 +7,10 @@ extern uint64_t rreg(hv_vcpuid_t vcpu, hv_x86_reg_t reg);
 extern void wreg(hv_vcpuid_t vcpu, hv_x86_reg_t reg, uint64_t v);
 
 #define readMem8(a) _memory[a]
-#define writeMem8(a, v) do { _memory[a] = v; } while (0)
+#define writeMem8(a, v) \
+  do {                  \
+    _memory[a] = v;     \
+  } while (0)
 
 #define AX ((uint16_t)rreg(_vcpu, HV_X86_RAX))
 #define BX ((uint16_t)rreg(_vcpu, HV_X86_RBX))

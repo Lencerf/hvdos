@@ -4,6 +4,7 @@
 #ifndef __DOSKernel_h
 #define __DOSKernel_h
 
+#include <Hypervisor/hv.h>
 #include <Hypervisor/hv_vmx.h>
 
 #include <map>
